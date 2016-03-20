@@ -1,6 +1,6 @@
 lib/
 classes/
-*.png
+model/*.png
 *.class
 
 # Mobile Tools for Java (J2ME)
