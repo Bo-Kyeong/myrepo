@@ -1,0 +1,23 @@
+package haedfirst.strategy;
+public abstract class Duck{
+  FlyBehavior FlyBehavior;
+  QuackBehavior flyBehavior;
+  public Duck();
+  public void setFlyBehavior{
+    public Duck(){}
+    public void setFlyBehavior(FlyBehavior fb){
+      flyBehavior = fb;
+    }
+    public void setQuackBehavior(QuackBehavior qb){
+      quackBehavior=qb;
+    }
+    abstract void display()
+      public void performFly(){
+      flyBrhavior.fly();
+      
+      public void formQuack()[
+                              QuackBehavior.quack();
+                              }
+public void swim(){
+  System.out.println("")
+  
