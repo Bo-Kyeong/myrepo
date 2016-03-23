@@ -1,0 +1,2 @@
+SOLID원칙중 SRP에 의하여 각각의 comparator를 따로 만들었다.
+OCP에 의하여 Sorter를 만들었고 ISP에의하여 인터페이스인 Comporator을 분리시켰다. 
