@@ -1,0 +1,10 @@
+package com.j2.w4;
+
+class DarkRoast extends Beverage{
+  public DarkRoast(){
+    description = "Dark Roast Coffee";
+  }
+  public double cost(){
+    return.99;
+  }
+}

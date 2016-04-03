@@ -1,70 +1,23 @@
 package com.j2.w4;
 
-abstract class Beverage{
-  String description = "Unknown Beverage";
-    public String getDescription(){
-    return description;
-  }
-    public abstract double cost();
-}
-
-class Espresso extends Beverage{
-  public Espresso(){
-   description = "Espresso"; 
-  }
-  public double cost(){
-    return 1.99;
-  }
-}
-
-class DarkRoast extends Beverage{
-  public DarkRoast(){
-    description = "Dark Roast Coffee";
-  }
-  public double cost(){
-    return.99;
-  }
-}
-
-abstract class CondimentDecorator extends Beverage{
- public abstract String getDescription();
- }
- 
-class Mocha extends CondimentDecorator{
-  Beverage beverage;
-  public Mocha(Beverage b){
-    beverage=b;
-  }
-  public String getDescription(){
-    return beverage.getDescription()+".Mocha";
-  }
-  public double cost(){
-    return beverage.cost()+.20;
-  }
-}
-
-class Whip extends CondimentDecorator{
-  Beverage beverage;
-  public Whip(Beverage b){
-    beverage = b;
-  }
-  public String getDescription(){
-    return beverage.getDescription()+".Whip";
-  }
-  public double cost(){
-    return beverage.cost()+.10;
-  }
-}
-
 public class StarbuzzCoffee{
   public static void main(String args[]){
-    Beverage b = new DarkRoast();
+    Beverage b1 = new Espresso();
+    System.out.println(b1.getDescription());
+    System.out.println("$"+b1.cost());
     
-    Beverage md = new Mocha(b);
+    Beverage b2 = new DarkRoast();
+    Beverage md = new Mocha(b2);
     Beverage wmd = new Whip(md);
-    
     System.out.println(wmd.getDescription());
-    System.out.println(wmd.cost());
+    System.out.println("$"+wmd.cost());
+    
+    Beverage b3 = new HouseBlend();
+    Beverage s = new Soy(b3);
+    Beverage sm = new Mocha(s);
+    Beverage smw = new Whip(sm);
+    System.out.println(smw.getDescription());
+    System.out.println("$"+smw.cost());
   }
 }
 
