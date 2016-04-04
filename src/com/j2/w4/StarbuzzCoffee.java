@@ -16,8 +16,23 @@ public class StarbuzzCoffee{
     Beverage s = new Soy(b3);
     Beverage sm = new Mocha(s);
     Beverage smw = new Whip(sm);
+    Beverage sc = new Caramel(s);
+    Beverage scw = new Whip(sc);
     System.out.println(smw.getDescription());
     System.out.println("$"+smw.cost());
+    System.out.println(scw.getDescription());
+    System.out.println("$"+scw.cost());
+    
+    Beverage b4 = new HouseBlend();
+    Beverage m = new Milk(b4);
+    Beverage mm = new Mocha(m);
+    Beverage mmw = new Whip(mm);
+    Beverage mc = new Caramel(m);
+    Beverage wmc = new Whip(mc);
+    System.out.println(smw.getDescription());
+    System.out.println("$"+mmw.cost());
+    System.out.println(wmc.getDescription());
+    System.out.println("$"+wmc.cost());
   }
 }
 
