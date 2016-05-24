@@ -10,6 +10,7 @@ public class DuckSortTestDrive{
     System.out.println("Before sorting");
     display(ducks);
     Arrays.sort(ducks);
+    
     System.out.println("\nAfter sorting:");
     display(ducks);
   }
